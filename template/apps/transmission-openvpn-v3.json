@@ -62,10 +62,14 @@
 	],
 	"privileged": true,
 	"restart_policy": "unless-stopped",
-	"title": "Transmission-OpenVPN",
+	"title": "Transmission OpenVPN v3",
 	"type": 1,
 	"videoID": "N.05",
 	"volumes": [
+                {
+                        "bind": "/portainer/Files/AppData/Config/transmission-openvpn",
+                        "container": "/config"
+                },
 		{
 			"bind": "/portainer/Downloads",
 			"container": "/data"
