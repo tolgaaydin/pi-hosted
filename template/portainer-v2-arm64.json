@@ -7476,6 +7476,35 @@
 		},
 		{
 			"categories": [
+				"Tools",
+				"Web",
+				"RSS"
+			],
+			"description": "rss-dl is a tool to auto download rss videos",
+			"env": [
+				{
+					"default": "rss.example.com",
+					"label": "RSS_FEED_URL",
+					"name": "RSS_FEED_URL"
+				}
+			],
+			"image": "bossman7309/rss-dl:latest",
+			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/rss-dl.png",
+			"name": "rss-dl",
+			"platform": "linux",
+			"restart_policy": "unless-stopped",
+			"title": "rss-dl",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/downloads",
+					"container": "/portainer/Files/AppData/Config/rss-dl"
+				}
+			],
+			"note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://git.bossman7309.net/bossman7309/rss-dl\" target=\"_blank\">https://git.bossman7309.net/bossman7309/rss-dl</a><br><br><br>"
+		},
+		{
+			"categories": [
 				"Other",
 				"Tools"
 			],
@@ -8669,7 +8698,7 @@
 					"name": "PGID"
 				}
 			],
-			"image": "linuxserver/unifi-controller:latest",
+			"image": "lscr.io/linuxserver/unifi-controller:latest",
 			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/unifi-icon.png",
 			"name": "unifi-controller",
 			"platform": "linux",
