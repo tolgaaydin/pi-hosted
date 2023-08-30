@@ -2238,7 +2238,7 @@
 			"name": "flatnotes",
 			"platform": "linux",
 			"ports": [
-				"8715:80/tcp"
+				"8715:8080/tcp"
 			],
 			"restart_policy": "unless-stopped",
 			"title": "flatnotes",
@@ -2326,7 +2326,7 @@
 			"ports": [
 				"30000:30000/tcp"
 			],
-			"restart_polocy": "unless-stopped",
+			"restart_policy": "unless-stopped",
 			"title": "FoundryVTT Server",
 			"type": 1,
 			"volumes": [
@@ -2974,7 +2974,7 @@
 					"name": "TZ"
 				}
 			],
-			"image": "oznu/homebridge:latest",
+			"image": "homebridge/homebridge:latest",
 			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/homebridge.png",
 			"name": "homebridge",
 			"network": "host",
@@ -3023,7 +3023,7 @@
 					"name": "TZ"
 				}
 			],
-			"image": "oznu/homebridge:debian",
+			"image": "homebridge/homebridge:ubuntu",
 			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/homebridge.png",
 			"name": "homebridge-debian",
 			"network": "host",
@@ -4597,7 +4597,7 @@
 			"ports": [
 				"25565:25565/tcp"
 			],
-			"restart_polocy": "unless-stopped",
+			"restart_policy": "unless-stopped",
 			"title": "Minecraft Server",
 			"type": 1,
 			"volumes": [
