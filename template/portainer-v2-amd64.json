@@ -232,7 +232,7 @@
 			"description": "A Fauxmo frontend that facilitates multi-device control via Alexa services by emulating wemo devices, enabling users to turn computers on/off seamlessly using voice commands.",
 			"image": "cristianeduardmihai/alexa-wol:latest",
 			"logo": "https://raw.githubusercontent.com/CristianEduardMihai/alexa-wol/main/images/logo.jpg",
-			"name": "Alexa Wake On Lan",
+			"name": "Alexa-Wake-On-Lan",
 			"platform": "linux",
 			"network": "host",
 			"restart_policy": "unless-stopped",
@@ -266,8 +266,8 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/alpine-xfce4-novnc/home/apline/downloads",
-					"container": "/home/apline/downloads"
+					"bind": "/portainer/Files/AppData/Config/alpine-xfce4-novnc/home/alpine/downloads",
+					"container": "/home/alpine/downloads"
 				}
 			]
 		},
@@ -1160,6 +1160,74 @@
 				}
 			],
 			"note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"http://codiad.com/\" target=\"_blank\">http://codiad.com/</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/Codiad/Codiad/wiki/Quick-installation-using-Docker\" target=\"_blank\">https://github.com/Codiad/Codiad/wiki/Quick-installation-using-Docker</a><br><br><br>"
+		},
+		{
+			"categories": [
+				"Other",
+				"tools"
+			],
+			"description": "Please see the install document at https://github.com/pi-hosted/pi-hosted/tree/master/docs for instructions on installing the template to work with NextCloud.",
+			"env": [
+				{
+					"description": "User name for the admin console.",
+					"default": "admin",
+					"label": "username",
+					"name": "username"
+				},
+				{
+					"description": "Password for the admin console.",
+					"default": "z#wYaMnS4!?9RK",
+					"label": "password",
+					"name": "password"
+				},
+				{
+					"description": "When this environment variable is set (is not “”), then startup script will not generate a new SSL certificate signed by a dummy CA. It is useful, if you want to use your own SSL certificate for some reason.",
+					"default": "",
+					"label": "DONT_GEN_SSL_CERT",
+					"name": "DONT_GEN_SSL_CERT"
+				},
+				{
+					"description": "When this environment variable is set (is not “”), then startup script will generate a new SSL certificate signed by a dummy CA for this domain, not for localhost",
+					"default": "",
+					"label": "cert_domain",
+					"name": "cert_domain"
+				},
+				{
+					"description": "When this environment variable is set (is not “”), then its value will be used as server name in /etc/coolwsd/coolwsd.xml. Without this, CODE is not delivering a correct host for the websocket connection in case of a proxy in front of it.",
+					"default": "collabora.domain.tld | http://IP:Port",
+					"label": "server_name",
+					"name": "server_name"
+				},
+				{
+					"description": "By default only limited set of spelling dictionaries and thesauri are configured for CODE, mainly for performance reasons. The default set of languages is the following: de_DE en_GB en_US es_ES fr_FR it nl pt_BR pt_PT ru. With the dictionaries environment variable you can change this list. The dictionaries environment variable should contain the space separated list of language codes (optionally followed by country code). In order to save resources, it makes sense to load only those dictionaries that are actually needed.",
+					"default": "",
+					"label": "dictionaries",
+					"name": "dictionaries"
+				},
+				{
+					"description": "You can pass extra command line parameters to coolwsd via this environment variable. For example, if you want to start coolwsd without SSL, when you test or develop, the syntax is: -e ''extra_params=--o:ssl.enable=false''. To learn about all possible options, refer to the self-documented /etc/coolwsd/coolwsd.xml configuration file in the Docker image.",
+					"default": "--o:ssl.enable=false --o:ssl.termination=true",
+					"label": "extra_params",
+					"name": "extra_params"
+				},
+				{
+					"description": "The domain of your NextCloud instance.",
+					"default": "nextcloud.domain.tld",
+					"label": "domain",
+					"name": "domain"
+				}
+			],
+			"image": "collabora/code:latest",
+			"logo": "https://www.collaboraoffice.com/wp-content/uploads/2022/03/collabora-productivity-nav-icon.png",
+			"name": "collabora",
+			"platform": "linux",
+			"ports": [
+				"9980:9980/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "Collabora Online Development Edition (CODE)",
+			"type": 1,
+			"note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://www.collaboraoffice.com/\" target=\"_blank\">https://www.collaboraoffice.com/</a><br><b>Official Docker Documentation: </b><a href=\"https://sdk.collaboraonline.com/docs/installation/CODE_Docker_image.html\" target=\"_blank\">https://sdk.collaboraonline.com/docs/installation/CODE_Docker_image.html</a><br><br><br>"
 		},
 		{
 			"categories": [
@@ -2209,7 +2277,7 @@
 					"name": "PGID"
 				}
 			],
-			"image": "lscr.io/linuxserver/firefox:latest",
+			"image": "linuxserver/firefox:latest",
 			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/firefox.png",
 			"name": "Firefox",
 			"platform": "linux",
@@ -3190,7 +3258,7 @@
 				"Dashboard"
 			],
 			"description": "Homepage helps you organize your self-hosted services by making them accessible from a single place",
-			"image": "ghcr.io/benphelps/homepage:latest",
+			"image": "ghcr.io/gethomepage/homepage:latest",
 			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/homepage.png",
 			"name": "Homepage",
 			"platform": "linux",
@@ -3530,6 +3598,11 @@
 					]
 				},
 				{
+					"default": "CHANGE_ME!!!",
+					"label": "HMAC_KEY",
+					"name": "HMAC_KEY"
+				},
+				{
 					"default": "US",
 					"description": "Look in the configuration example (link above) for more codes",
 					"label": "REGION",
@@ -3830,6 +3903,58 @@
 				}
 			],
 			"note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://github.com/Fallenbagel/jellyseerr\" target=\"_blank\">https://github.com/Fallenbagel/jellyseerr</a><br><b>Official Docker Documentation: </b><a href=\"https://hub.docker.com/r/fallenbagel/jellyseerr\" target=\"_blank\">https://hub.docker.com/r/fallenbagel/jellyseerr</a><br><br><br>"
+		},
+		{
+			"categories": [
+				"Backup",
+				"CMD",
+				"Web",
+				"Tools"
+			],
+			"description": "Joplin Server is a web app that allows you to sync and share notes with Joplin, a popular note-taking app.",
+			"env": [
+				{
+					"default": "http://localhost:22300",
+					"label": "URL",
+					"name": "URL"
+				},
+				{
+					"default": "22300",
+					"label": "APP_PORT",
+					"name": "__PORT__"
+				},
+				{
+					"default": "joplin",
+					"label": "POSTGRES_USER",
+					"name": "POSTGRES_USER"
+				},
+				{
+					"default": "joplin",
+					"label": "POSTGRES_DB",
+					"name": "POSTGRES_DB"
+				},
+				{
+					"default": "joplin",
+					"label": "POSTGRES_DATABASE",
+					"name": "POSTGRES_DATABASE"
+				},
+				{
+					"default": "joplin",
+					"label": "POSTGRES_PASSWORD",
+					"name": "POSTGRES_PASSWORD"
+				}
+			],
+			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/joplin.png",
+			"name": "joplin-server",
+			"platform": "linux",
+			"repository": {
+				"stackfile": "stack/joplin-server.yml",
+				"url": "https://github.com/pi-hosted/pi-hosted/master/"
+			},
+			"restart_policy": "unless-stopped",
+			"title": "Joplin server",
+			"type": 3,
+			"note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://hub.docker.com/r/etechonomy/joplin-server\" target=\"_blank\">https://hub.docker.com/r/etechonomy/joplin-server</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/etechonomy/joplin-server\" target=\"_blank\">https://github.com/etechonomy/joplin-server</a><br><br><br>"
 		},
 		{
 			"categories": [
@@ -4306,6 +4431,62 @@
 		},
 		{
 			"categories": [
+				"Other",
+				"Web"
+			],
+			"description": "The Ultimate Link Management Solution",
+			"env": [
+				{
+					"default": "name@domain.tld",
+					"label": "SERVER_ADMIN",
+					"name": "SERVER_ADMIN"
+				},
+				{
+					"default": "HTTP_Domain",
+					"label": "HTTP_SERVER_NAME",
+					"name": "HTTP_SERVER_NAME"
+				},
+				{
+					"default": "HTTPS_Domain",
+					"label": "HTTPS_SERVER_NAME",
+					"name": "HTTPS_SERVER_NAME"
+				},
+				{
+					"default": "info",
+					"label": "LOG_LEVEL",
+					"name": "LOG_LEVEL"
+				},
+				{
+					"default": "Europe/London",
+					"label": "TZ",
+					"name": "TZ"
+				},
+				{
+					"default": "256M",
+					"label": "PHP_MEMORY_LIMIT",
+					"name": "PHP_MEMORY_LIMIT"
+				},
+				{
+					"default": "8M",
+					"label": "UPLOAD_MAX_FILESIZE",
+					"name": "UPLOAD_MAX_FILESIZE"
+				}
+			],
+			"image": "linkstackorg/linkstack:latest",
+			"logo": "https://raw.githubusercontent.com/LinkStackOrg/branding/main/logo/png/logo.png",
+			"name": "LinkStack",
+			"platform": "linux",
+			"ports": [
+				"8822:80/tcp",
+				"8844:443/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "linkstack",
+			"type": 1,
+			"note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://linkstack.org/\" target=\"_blank\">https://linkstack.org/</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/linkstackorg/linkstack#readme\" target=\"_blank\">https://github.com/linkstackorg/linkstack#readme</a><br><br><br>"
+		},
+		{
+			"categories": [
 				"Tools",
 				"Productivity"
 			],
@@ -4630,7 +4811,7 @@
 			"note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://hay-kot.github.io/mealie/\" target=\"_blank\">https://hay-kot.github.io/mealie/</a><br><b>Official Docker Documentation: </b><a href=\"https://hay-kot.github.io/mealie/documentation/getting-started/install/\" target=\"_blank\">https://hay-kot.github.io/mealie/documentation/getting-started/install/</a><br><br><br>Default Credentials: Username: changeme@email.com Password: MyPassword. Documentation is Available <a href='https://hay-kot.github.io/mealie/documentation/getting-started/install/'>here</a>.",
 			"platform": "linux",
 			"ports": [
-				"9925:80/tcp"
+				"9925:9000/tcp"
 			],
 			"restart_policy": "unless-stopped",
 			"title": "Mealie",
@@ -4685,6 +4866,30 @@
 				}
 			],
 			"note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://pymedusa.com/\" target=\"_blank\">https://pymedusa.com/</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.linuxserver.io/images/docker-medusa\" target=\"_blank\">https://docs.linuxserver.io/images/docker-medusa</a><br><br><br>"
+		},
+		{
+			"categories": [
+				"Other",
+				"Web"
+			],
+			"description": "A privacy-first, lightweight note-taking service.",
+			"image": "ghcr.io/usememos/memos:latest",
+			"logo": "https://raw.githubusercontent.com/usememos/memos/main/web/public/logo.png",
+			"name": "memos",
+			"platform": "linux",
+			"ports": [
+				"5230:5230/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "Memos",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/portainer/Files/AppData/Config/Memos",
+					"container": "/var/opt/memos"
+				}
+			],
+			"note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://usememos.com\" target=\"_blank\">https://usememos.com</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/usememos/memos\" target=\"_blank\">https://github.com/usememos/memos</a><br><br><br>"
 		},
 		{
 			"categories": [
@@ -5689,7 +5894,7 @@
 					"name": "TZ"
 				}
 			],
-			"image": "jc21/nginx-proxy-manager:v3-develop",
+			"image": "jc21/nginx-proxy-manager:v3",
 			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/proxy_mgr.png",
 			"name": "nginx-proxy-manager-v3",
 			"platform": "linux",
@@ -7982,6 +8187,38 @@
 				"Other",
 				"Tools"
 			],
+			"description": "WebUI for smartd S.M.A.R.T monitoring",
+			"image": "ghcr.io/analogj/scrutiny:master-omnibus",
+			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/scrutiny.png",
+			"name": "scrutiny",
+			"note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://github.com/AnalogJ/scrutiny\" target=\"_blank\">https://github.com/AnalogJ/scrutiny</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/AnalogJ/scrutiny\" target=\"_blank\">https://github.com/AnalogJ/scrutiny</a><br><br><br>Set your port (default: 8080) and deploy the container. Edit container, enable SYS_RAWIO capability, add device /dev/sda in host and container field, finaly deploy the container again.",
+			"platform": "linux",
+			"ports": [
+				"8080:8080/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "scrutiny",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/portainer/Files/AppData/Config/scrutiny/config",
+					"container": "/opt/scrutiny/config"
+				},
+				{
+					"bind": "/portainer/Files/AppData/Config/scrutiny/influxdb",
+					"container": "/opt/scrutiny/influxdb"
+				},
+				{
+					"bind": "/run/udev",
+					"container": "/run/udev"
+				}
+			]
+		},
+		{
+			"categories": [
+				"Other",
+				"Tools"
+			],
 			"description": "Open-Source Privacy-respecting metasearch engine",
 			"env": [
 				{
@@ -8124,6 +8361,30 @@
 				}
 			],
 			"note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://github.com/SickGear/SickGear/wiki\" target=\"_blank\">https://github.com/SickGear/SickGear/wiki</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.linuxserver.io/images/docker-sickgear\" target=\"_blank\">https://docs.linuxserver.io/images/docker-sickgear</a><br><br><br>"
+		},
+		{
+			"categories": [
+				"Other",
+				"Web"
+			],
+			"description": "Slash is an open source, self-hosted bookmarks and link sharing platform. It allows you to organize your links with tags, and share them with custom shortened URLs. Slash also supports team sharing of link libraries for easy collaboration.",
+			"image": "yourselfhosted/slash:latest",
+			"logo": "https://raw.githubusercontent.com/yourselfhosted/slash/main/frontend/web/public/logo.png",
+			"name": "slash",
+			"platform": "linux",
+			"ports": [
+				"5231:5231/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "Slash",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/portainer/Files/AppData/Config/Slash",
+					"container": "/var/opt//slash"
+				}
+			],
+			"note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://github.com/yourselfhosted/slash\" target=\"_blank\">https://github.com/yourselfhosted/slash</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/yourselfhosted/slash\" target=\"_blank\">https://github.com/yourselfhosted/slash</a><br><br><br>"
 		},
 		{
 			"categories": [
