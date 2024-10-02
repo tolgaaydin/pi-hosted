@@ -277,58 +277,6 @@
 		},
 		{
 			"categories": [
-				"Wiki"
-			],
-			"description": "Bookstack is a free and open source Wiki designed for creating beautiful documentation. Featuring a simple, but powerful WYSIWYG editor it allows for teams to create detailed and useful documentation with ease.",
-			"env": [
-				{
-					"default": "1000",
-					"label": "PUID",
-					"name": "PUID"
-				},
-				{
-					"default": "1000",
-					"label": "PGID",
-					"name": "PGID"
-				},
-				{
-					"default": "America/New_York",
-					"label": "TZ",
-					"name": "TZ"
-				},
-				{
-					"label": "DATABASE_PASSWORD",
-					"name": "DATABASE_PASSWORD"
-				},
-				{
-					"label": "MYSQL_ROOT_PASSWORD",
-					"name": "MYSQL_ROOT_PASSWORD"
-				},
-				{
-					"default": "http://192.168.X.Y:6875",
-					"description": "Address to access Bookstack. If using a domain, add it here. If not set correctly the app will not be accessible",
-					"label": "APP_URL",
-					"name": "APP_URL"
-				},
-				{
-					"default": "6875",
-					"label": "PORT",
-					"name": "PORT"
-				}
-			],
-			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/bookstack2.png",
-			"name": "bookstack",
-			"note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://www.bookstackapp.com/\" target=\"_blank\">https://www.bookstackapp.com/</a><br><b>Official Docker Documentation: </b><a href=\"https://www.bookstackapp.com/docs/admin/installation/#docker\" target=\"_blank\">https://www.bookstackapp.com/docs/admin/installation/#docker</a><br><br><br>Default login is admin@admin.com with a password of password. The database created is called bookstackapp and the database user is called bookstack",
-			"platform": "linux",
-			"repository": {
-				"stackfile": "stack/bookstack.yml",
-				"url": "https://github.com/pi-hosted/pi-hosted"
-			},
-			"title": "Bookstack",
-			"type": 3
-		},
-		{
-			"categories": [
 				"Tools",
 				"Web",
 				"Webserver"
@@ -578,7 +526,7 @@
 			"name": "Dashy",
 			"platform": "linux",
 			"ports": [
-				"9100:80/tcp"
+				"9100:8080/tcp"
 			],
 			"restart_policy": "unless-stopped",
 			"title": "Dashy",
@@ -1558,7 +1506,7 @@
 				"Books"
 			],
 			"description": "Kavita is a fast, feature rich, cross platform reading server.",
-			"image": "kizaing/kavita:latest",
+			"image": "jvmilazz0/kavita:latest",
 			"logo": "https://raw.githubusercontent.com/Kareadita/Kavita/develop/Logo/kavita.svg",
 			"name": "Kavita",
 			"platform": "linux",
@@ -1593,7 +1541,7 @@
 					"container": "/kavita/config"
 				}
 			],
-			"note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://www.kavitareader.com/#home\" target=\"_blank\">https://www.kavitareader.com/#home</a><br><b>Official Docker Documentation: </b><a href=\"https://wiki.kavitareader.com/en/install/docker-install\" target=\"_blank\">https://wiki.kavitareader.com/en/install/docker-install</a><br><br><br>"
+			"note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://www.kavitareader.com/\" target=\"_blank\">https://www.kavitareader.com/</a><br><b>Official Docker Documentation: </b><a href=\"https://wiki.kavitareader.com/installation/docker\" target=\"_blank\">https://wiki.kavitareader.com/installation/docker</a><br><br><br>"
 		},
 		{
 			"categories": [
@@ -4216,61 +4164,6 @@
 				}
 			],
 			"note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://yacht.sh/\" target=\"_blank\">https://yacht.sh/</a><br><b>Official Docker Documentation: </b><a href=\"https://yacht.sh/docs/Installation/Install#via-docker-compose\" target=\"_blank\">https://yacht.sh/docs/Installation/Install#via-docker-compose</a><br><br><br>"
-		},
-		{
-			"categories": [
-				"Music"
-			],
-			"description": "Self hosted Spotify tracking dashboard.",
-			"env": [
-				{
-					"default": "3081",
-					"label": "API Port",
-					"name": "__api_port__"
-				},
-				{
-					"default": "3080",
-					"label": "Client Port",
-					"name": "__client_port__"
-				},
-				{
-					"default": "http://192.168.X.Y:3080",
-					"label": "Client Endpoint",
-					"name": "__client_endpoint__",
-					"description": "If you have changed the default client port don't forget to change it here too."
-				},
-				{
-					"default": "http://192.168.X.Y:3081",
-					"label": "API Endpoint",
-					"name": "__api_endpoint__",
-					"description": "If you have changed the default API port don't forget to change it here too."
-				},
-				{
-					"default": "America/New_York",
-					"label": "TZ",
-					"name": "TZ"
-				},
-				{
-					"description": "Create a Spotify App and copy the Client ID: https://developer.spotify.com/dashboard/applications",
-					"label": "Spotify Client ID",
-					"name": "__your_spotify_client_id__"
-				},
-				{
-					"description": "Copy the Client Secret: https://developer.spotify.com/dashboard/applications",
-					"label": "Spotify Client Secret",
-					"name": "__your_spotify_secret__"
-				}
-			],
-			"name": "Your Spotify",
-			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/your-spotify.png",
-			"note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://github.com/Yooooomi/your_spotify\" target=\"_blank\">https://github.com/Yooooomi/your_spotify</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/Yooooomi/your_spotify#readme\" target=\"_blank\">https://github.com/Yooooomi/your_spotify#readme</a><br><br><br>Create a Spotify App here: https://developer.spotify.com/dashboard/applications. Don't forget adding Redirect URL: http://192.168.X.Y:3081/oauth/spotify/callback under edit settings of the dashboard.",
-			"platform": "linux",
-			"repository": {
-				"stackfile": "stack/your-spotify.yml",
-				"url": "https://github.com/pi-hosted/pi-hosted"
-			},
-			"title": "your-spotify",
-			"type": 3
 		},
 		{
 			"categories": [

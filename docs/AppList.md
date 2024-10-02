@@ -4,7 +4,7 @@ List of all apps included in this project with info related to it.
 
 |**Arm32:**          |**Arm64:**|**Amd64:**|**Total:**|
 |:-------------------|:--------:|:--------:|:--------:|
-| 106 apps | 230 apps | 233 apps | 236 apps |
+| 104 apps | 230 apps | 233 apps | 236 apps |
 
 ---
 
@@ -25,7 +25,7 @@ List of all apps included in this project with info related to it.
 |[Bazarr](https://www.bazarr.media/)|:x:|:heavy_check_mark:|:heavy_check_mark:|Container| [![](../build/images/blue_doc_icon.png)](https://wiki.bazarr.media/Getting-Started/Installation/Docker/docker/) |  |  |  |
 |[Beets](https://beets.io/)|:x:|:heavy_check_mark:|:heavy_check_mark:|Container| [![](../build/images/blue_doc_icon.png)](https://docs.linuxserver.io/images/docker-beets) |  |  |  |
 |[Bind9](https://hub.docker.com/r/ubuntu/bind9)|:x:|:heavy_check_mark:|:heavy_check_mark:|Container| [![](../build/images/blue_doc_icon.png)](https://hub.docker.com/r/ubuntu/bind9) |  | [![](../build/images/script_icon.png)](../tools/install_bind9.sh) |  |
-|[Bookstack](https://www.bookstackapp.com/)|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|Stack| [![](../build/images/blue_doc_icon.png)](https://www.bookstackapp.com/docs/admin/installation/#docker) |  |  |  |
+|[Bookstack](https://www.bookstackapp.com/)|:x:|:heavy_check_mark:|:heavy_check_mark:|Stack| [![](../build/images/blue_doc_icon.png)](https://www.bookstackapp.com/docs/admin/installation/#docker) |  |  |  |
 |[Caddy](https://caddyserver.com/)|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|Container| [![](../build/images/blue_doc_icon.png)](https://hub.docker.com/_/caddy) |  | [![](../build/images/script_icon.png)](../tools/install_caddy.sh) |  |
 |[Calibre](https://calibre-ebook.com/)|:x:|:heavy_check_mark:|:heavy_check_mark:|Container| [![](../build/images/blue_doc_icon.png)](https://docs.linuxserver.io/images/docker-calibre) |  |  |  |
 |[Calibre Web](https://calibre-ebook.com/)|:x:|:heavy_check_mark:|:heavy_check_mark:|Container| [![](../build/images/blue_doc_icon.png)](https://docs.linuxserver.io/images/docker-calibre-web) |  |  |  |
@@ -106,7 +106,7 @@ List of all apps included in this project with info related to it.
 |[Joplin server](https://hub.docker.com/r/etechonomy/joplin-server)|:x:|:heavy_check_mark:|:heavy_check_mark:|Stack| [![](../build/images/blue_doc_icon.png)](https://github.com/etechonomy/joplin-server) |  |  |  |
 |[Kasm](https://www.kasmweb.com/)|:x:|:heavy_check_mark:|:heavy_check_mark:|Container| [![](../build/images/blue_doc_icon.png)](https://github.com/linuxserver/docker-kasm) |  |  |  |
 |[Kasm with renderD128 support](https://www.kasmweb.com/)|:x:|:heavy_check_mark:|:heavy_check_mark:|Container| [![](../build/images/blue_doc_icon.png)](https://github.com/linuxserver/docker-kasm) |  |  |  |
-|[Kavita](https://www.kavitareader.com/#home)|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|Container| [![](../build/images/blue_doc_icon.png)](https://wiki.kavitareader.com/en/install/docker-install) |  |  |  |
+|[Kavita](https://www.kavitareader.com/)|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|Container| [![](../build/images/blue_doc_icon.png)](https://wiki.kavitareader.com/installation/docker) |  |  |  |
 |[Klipper[Testing], Mainsail, Moonraker](https://hub.docker.com/r/mkuf/klipper)|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|Stack| [![](../build/images/blue_doc_icon.png)](https://hub.docker.com/r/mkuf/klipper) |  | [![](../build/images/script_icon.png)](../tools/install_klipper.sh) |  |
 |[Kodi Headless](https://kodi.tv/)|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|Container| [![](../build/images/blue_doc_icon.png)](https://hub.docker.com/r/lsioarmhf/kodi-headless-aarch64/) |  |  |  |
 |[Komga](https://github.com/gotson/komga)|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|Container| [![](../build/images/blue_doc_icon.png)](https://komga.org/) |  |  |  |
@@ -140,7 +140,6 @@ List of all apps included in this project with info related to it.
 |[n8n](https://n8n.io/)|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|Container| [![](../build/images/blue_doc_icon.png)](https://docs.n8n.io/getting-started/installation/#docker) |  |  |  |
 |[Netdata](https://www.netdata.cloud/)|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|Container| [![](../build/images/blue_doc_icon.png)](https://learn.netdata.cloud/docs/agent/packaging/docker) |  |  |  |
 |[Nextcloud](https://nextcloud.com/)|:x:|:heavy_check_mark:|:heavy_check_mark:|Stack| [![](../build/images/blue_doc_icon.png)](https://docs.linuxserver.io/images/docker-nextcloud) |  |  |  |
-|[NextcloudPi](https://ownyourbits.com/nextcloudpi/)|:x:|:heavy_check_mark:|:heavy_check_mark:|Container| [![](../build/images/blue_doc_icon.png)](https://ownyourbits.com/2017/06/08/nextcloudpi-docker-for-raspberry-pi/) |  |  | [![Installing Nextcloud on Raspberry Pi Docker](../build/images/yt-badge-novaspirit.png "Installing Nextcloud on Raspberry Pi Docker")](https://www.youtube.com/watch?v=E6IrT3g5Gqc&list=PL846hFPMqg3jwkxcScD1xw2bKXrJVvarc&index=9) |
 |[Nginx](https://nginx.org/en/)|:x:|:heavy_check_mark:|:heavy_check_mark:|Container| [![](../build/images/blue_doc_icon.png)](https://docs.linuxserver.io/images/docker-nginx) |  |  |  |
 |[Nginx Proxy Manager v2 with Mysql and Goaccess Charts [DEPRECATED]](https://nginxproxymanager.com/)|:x:|:heavy_check_mark:|:heavy_check_mark:|Stack| [![](../build/images/blue_doc_icon.png)](https://nginxproxymanager.com/setup/#using-mysql-mariadb-database) | [![](../build/images/red_doc_icon.png)](../docs/nginx_proxy_manager.md) | [![](../build/images/script_icon.png)](../tools/nginx-proxy-manager.sh) | [![Installing Nginx Proxy Manager on Docker](../build/images/yt-badge-novaspirit.png "Installing Nginx Proxy Manager on Docker")](https://www.youtube.com/watch?v=yl2Laxbqvo8&list=PL846hFPMqg3jwkxcScD1xw2bKXrJVvarc&index=10) |
 |[Nginx Proxy Manager v2 with Mysql [DEPRECATED]](https://nginxproxymanager.com/)|:x:|:heavy_check_mark:|:heavy_check_mark:|Stack| [![](../build/images/blue_doc_icon.png)](https://nginxproxymanager.com/setup/#using-mysql-mariadb-database) | [![](../build/images/red_doc_icon.png)](../docs/nginx_proxy_manager.md) | [![](../build/images/script_icon.png)](../tools/nginx-proxy-manager.sh) | [![Installing Nginx Proxy Manager on Docker](../build/images/yt-badge-novaspirit.png "Installing Nginx Proxy Manager on Docker")](https://www.youtube.com/watch?v=yl2Laxbqvo8&list=PL846hFPMqg3jwkxcScD1xw2bKXrJVvarc&index=10) |
@@ -233,6 +232,7 @@ List of all apps included in this project with info related to it.
 |[Vaultwarden](https://github.com/dani-garcia/vaultwarden)|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|Container| [![](../build/images/blue_doc_icon.png)](https://github.com/dani-garcia/vaultwarden/wiki) |  |  |  |
 |[Vikunja With Frontend](https://vikunja.io/)|:x:|:heavy_check_mark:|:heavy_check_mark:|Stack| [![](../build/images/blue_doc_icon.png)](https://vikunja.io/docs/full-docker-example/#example-with-nginx-as-proxy) |  | [![](../build/images/script_icon.png)](../tools/install_vikunja.sh) |  |
 |[Vlmcsd - KMS](https://hub.docker.com/r/mikolatero/vlmcsd)|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|Container| [![](../build/images/blue_doc_icon.png)](https://github.com/mikolatero/docker-vlmcsd) |  |  |  |
+|[Wallos](https://github.com/ellite/Wallos)|:x:|:heavy_check_mark:|:heavy_check_mark:|Container| [![](../build/images/blue_doc_icon.png)](https://github.com/ellite/Wallos) |  |  |  |
 |[Watchtower](https://containrrr.dev/watchtower/)|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|Container| [![](../build/images/blue_doc_icon.png)](https://containrrr.dev/watchtower/usage-overview/) |  |  | [![Upgrading Portainer and Updating Containers](../build/images/yt-badge-novaspirit.png "Upgrading Portainer and Updating Containers")](https://www.youtube.com/watch?v=q3wKqk8qVS8&list=PL846hFPMqg3jwkxcScD1xw2bKXrJVvarc&index=7) |
 |[WebGrab+Plus](http://www.webgrabplus.com/)|:x:|:heavy_check_mark:|:heavy_check_mark:|Container| [![](../build/images/blue_doc_icon.png)](https://docs.linuxserver.io/images/docker-webgrabplus) |  |  |  |
 |[Whisparr](https://hotio.dev/)|:x:|:heavy_check_mark:|:heavy_check_mark:|Container| [![](../build/images/blue_doc_icon.png)](https://wiki.servarr.com/en/whisparr) |  |  |  |
@@ -243,6 +243,6 @@ List of all apps included in this project with info related to it.
 |[Wordpress](https://wordpress.com/)|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|Stack| [![](../build/images/blue_doc_icon.png)](https://github.com/docker-library/docs/tree/master/wordpress#-via-docker-stack-deploy-or-docker-compose) | [![](../build/images/red_doc_icon.png)](../docs/wordpress_installation.md) |  |  |
 |[Yacht](https://yacht.sh/)|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|Container| [![](../build/images/blue_doc_icon.png)](https://yacht.sh/docs/Installation/Install#via-docker-compose) |  |  |  |
 |[Yourls](https://yourls.org/)|:x:|:heavy_check_mark:|:heavy_check_mark:|Stack| [![](../build/images/blue_doc_icon.png)](https://yourls.org/#Install) |  | [![](../build/images/script_icon.png)](../tools/install_yourls.sh) |  |
-|[your-spotify](https://github.com/Yooooomi/your_spotify)|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|Stack| [![](../build/images/blue_doc_icon.png)](https://github.com/Yooooomi/your_spotify#readme) |  |  |  |
+|[your-spotify](https://github.com/Yooooomi/your_spotify)|:x:|:heavy_check_mark:|:heavy_check_mark:|Stack| [![](../build/images/blue_doc_icon.png)](https://github.com/Yooooomi/your_spotify#readme) |  |  |  |
 |[YouTubeDL-Material](https://github.com/Tzahi12345/YoutubeDL-Material)|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|Container| [![](../build/images/blue_doc_icon.png)](https://github.com/Tzahi12345/YoutubeDL-Material#docker) |  |  |  |
 |[ZNC](https://wiki.znc.in/ZNC)|:x:|:heavy_check_mark:|:heavy_check_mark:|Container| [![](../build/images/blue_doc_icon.png)](https://docs.linuxserver.io/images/docker-znc) |  |  |  |
